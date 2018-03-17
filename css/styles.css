@@ -750,7 +750,7 @@ body {
 	margin-top: 99px;
 }
 
-.some-of-images img {
+.some-of-images li > img {
 	vertical-align: top;
 	display: block;
 	width: 100%;
@@ -781,18 +781,29 @@ body {
 	background: linear-gradient(to bottom,  rgba(243, 129, 129, .9), rgba(252, 227, 138, .9) 100%);
 }
 
-.some-of-images li:hover:after {
-	white-space: pre;
-	content: url(../img/PICTURE2.png) "\A CREATIVELY DESIGNED \A Lorem ipsum dolor sit";
+.some-of-descr {
 	position: absolute;
-	top: 41%;
-	left: 31%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 25%;
+	box-sizing: border-box;
+	display: none;
+}
+
+.some-of-images li:hover .some-of-descr {
 	display: inline-block;
-	line-height: 24px;
-	letter-spacing: 0px;
-	font-size: 15px;
+}
+
+.some-of-descr p {
 	font-family: Montserrat;
 	color: white;
+	font-size: 15px;
+	line-height: 24px;
+	letter-spacing: 0px;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .some-images-one li {
@@ -801,6 +812,10 @@ body {
 
 .some-images-two li:first-child {
 	float: left;
+}
+
+.some-images-two li:first-child .some-of-descr {
+	padding-top: 65%;
 }
 
 

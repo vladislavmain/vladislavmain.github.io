@@ -624,7 +624,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px)  {
 	html {
-		font-size: 3px;
+		font-size: 4px;
 	}
 
 	.home_p {

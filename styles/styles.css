@@ -739,7 +739,7 @@ ul {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
 	/* home */
 
@@ -778,7 +778,7 @@ ul {
 		transition: 1s;
 		position: absolute;
 		right: 10px;
-		top: 95px;
+		top: 75px;
 	}
 
 	.nav-trigger {
@@ -936,6 +936,10 @@ ul {
 		text-align: center;
 	}
 
+	.footer .wrapper {
+		padding: 0;
+	}
+
 	.footer-copyright,.footer-author {
 		float: none;
 	}
@@ -977,3 +981,14 @@ ul {
 		margin-bottom: 75px;
 	}
 }
+
+	@media (max-height: 375px) {
+
+		.nav-item {
+			height: 38px;
+		}
+
+		.nav-link {
+			line-height: 38px;
+		}
+	}

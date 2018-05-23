@@ -41,13 +41,13 @@
 			<h1 class="home-title">Creatives</h1>
 			<p class="home-subtitle">Power by PSDfreebies.com</p>
 		</div>
-		<div class="scroll-down-box">
-			<a href="#" class="scroll-down">
+		<div class="scroll-down-box" id="scroll-down-box">
+			<a href="#go" class="scroll-down">
 				<i class="fas fa-angle-down"></i>
 			</a>
 		</div>
 	</section>
-	<section class="agency">
+	<section class="agency" id="go">
 		<div class="wrapper">
 			<h2 class="agency-title">We Are An Awesome Agency</h2>
 			<div class="feature-boxes">
@@ -209,5 +209,20 @@
 			<address class="footer-author">Design by: <img src="img/bzzz.png" alt="пчелка"> PSDFreebies.com</address>
 		</div>
 	</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("#scroll-down-box").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+});
+</script>
+
+
 </body>
 </html>

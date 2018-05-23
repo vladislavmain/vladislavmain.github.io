@@ -701,6 +701,13 @@ ul {
 }
 
 
+@media (min-width: 1601px) {
+	.home,.key-feature,.contact  {
+		background-size: cover;
+	}
+}
+
+
 @media (max-width: 1024px) {
 	/* home */
 

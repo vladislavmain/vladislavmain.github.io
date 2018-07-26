@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Business Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="styles/animate.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<div class="logo">Black Sea</div>
+			<a href="#" class="menu-link">
+				<span></span>
+			</a>
+			<ul class="nav nav_active">
+				<li class="nav-item"><a href="#1">Home</a></li>
+				<li class="nav-item"><a href="#2">About me</a></li>
+				<li class="nav-item"><a href="#3">Portfolio</a></li>
+				<li class="nav-item"><a href="#4">Contact me</a></li>
+			</ul>
+		</div>
+	</header>
+	<section class="home">
+		<div class="home-slider">
+		    <div class="slide-one"></div>
+		    <div class="slide-two"></div>
+		    <div class="slide-three"></div>
+		    <div class="slide-two"></div>
+		    <div class="slide-three"></div>
+	  	</div>
+	  	<div class="home-container">
+	  		<h1 class="home-title">We need the tonic of wildness</h1>
+			<a class="home-btn" href="#">Read more</a>
+	  	</div>
+	</section>
+	<section class="services">
+		<div class="wrapper">
+			<h2 class="services-title">At the same time that we are earnest to explore & learn all things</h2>
+			<p class="services-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div class="services-images">
+				<img src="img/Shape-2.png" alt="img" class="services-img animated">
+				<img src="img/Shape-3.png" alt="img" class="services-img animated">
+				<img src="img/Shape-4.png" alt="img" class="services-img animated">
+			</div>
+		</div>
+	</section>
+	<section class="comment">
+		<div class="wrapper">
+			<div class="comment-people">
+				<div class="comment-photo"></div>
+				<h4 class="comment-name">Dhavan</h4>
+			</div>
+			<p class="comment-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+			a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+		</div>
+	</section>
+	<section class="contact">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6725.094762552449!2d30.46671008014167!3d59.92579273566315!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1530604065473" width="100%" height="517" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="contact-box">
+			<form class="contact-form" action="">
+				<input type="text" placeholder="Name" class="contact-name">
+				<input type="email" placeholder="email address" class="contact-email">
+				<textarea name="" id="" placeholder="Message"  class="contact-text"></textarea>
+				<input type="submit" value="✅" class="contact-button">
+			</form>
+		</div>
+	</section>
+	<footer class="footer">
+		<p>Copyright © 2012 Css Author.com</p>
+	</footer>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="slick/custom-slick.js"></script>
+	<script>	
+		$(document).ready(function(){
+			var link = $('.menu-link');
+			var link_active =  $('.menu-link_active');
+			var nav_active = $('.nav');
+
+			link.click(function(){
+				link.toggleClass('menu-link_active');
+				nav_active.toggleClass('nav_active');
+			});
+			link_active.click(function(){
+				link.removeClass('menu-link_active');
+				nav_active.removeClass('nav_active');
+			});
+		});
+
+$(window).scroll(function (){
+        $(' .services-img').each(function (){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            var heightWindow = $(window).height();
+            if (imagePos < topOfWindow+heightWindow && heightWindow <= 750) {
+                $('.services-img').filter(':first').addClass('bounceInLeft');
+                $('.services-img').filter(':eq(1)').addClass('bounceInUp');
+                $('.services-img').filter(':last').addClass('bounceInRight');
+                console.log(heightWindow);
+            }
+        });
+    });﻿
+		
+	</script>
+</body>
+</html>

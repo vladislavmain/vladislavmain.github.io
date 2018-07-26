@@ -1,0 +1,19 @@
+@font-face {
+	font-family: helvetica-light;
+	src: url("../fonts/HelveticaLTStd-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: helvetica-cond;
+	src: url("../fonts/HelveticaLTStd-LightCond.woff") format("woff"); 	
+}
+
+@font-face {
+	font-family: helvetica-roman;
+	src: url("../fonts/HelveticaLTStd-Roman.woff") format("woff");
+}
+
+@font-face {
+	font-family: helvetica-bold;
+	src: url("../fonts/HelveticaLTStd-Bold.woff") format("woff");
+}

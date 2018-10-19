@@ -6,6 +6,14 @@
   			 url("../fonts/Dominebold.ttf") format("truetype"); 
   			}
 
+@-webkit-keyframes preload {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
 @keyframes preload {
 	from {
 		opacity: 0;
@@ -14,17 +22,43 @@
 	}
 }
 
+@-webkit-keyframes hello {
+	from {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	} 50% {
+		-webkit-transform: rotate(-15deg);
+		        transform: rotate(-15deg);
+		-webkit-transform-origin: center bottom;
+		        transform-origin: center bottom;
+	} 75% {
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+		-webkit-transform-origin: center bottom;
+		        transform-origin: center bottom;
+	} 100% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	}
+}
+
 @keyframes hello {
 	from {
-		transform: rotate(0);
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
 	} 50% {
-		transform: rotate(-15deg);
-		transform-origin: center bottom;
+		-webkit-transform: rotate(-15deg);
+		        transform: rotate(-15deg);
+		-webkit-transform-origin: center bottom;
+		        transform-origin: center bottom;
 	} 75% {
-		transform: rotate(20deg);
-		transform-origin: center bottom;
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+		-webkit-transform-origin: center bottom;
+		        transform-origin: center bottom;
 	} 100% {
-		transform: rotate(0);
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
 	}
 }
 
@@ -33,14 +67,25 @@ body {
 }
 
 .container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	min-height: 100vh;
 	max-width: 1280px;
 	margin: 0 auto;
-	animation: preload 2s ease-in;
+	-webkit-animation: preload 2s ease-in;
+	        animation: preload 2s ease-in;
 	}
 
 h1 {
@@ -54,10 +99,12 @@ h1:before {
 	content: "";
 	display: inline-block;
 	background: url("../ruka.svg") no-repeat;
-	background-size: contain;
+	-webkit-background-size: contain;
+	        background-size: contain;
 	height: 50px;
 	width: 40px;
-	animation: hello 2s 2.5s;
+	-webkit-animation: hello 2s 2.5s;
+	        animation: hello 2s 2.5s;
 	}
 
 a {
@@ -66,38 +113,59 @@ a {
 	display: inline-block;
 	width: 200px;
 	height: 300px;
-	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
 	}
 
 a:hover {
 	background-position: bottom;
-	box-shadow: 0 0 10px white;
+	-webkit-box-shadow: 0 0 10px white;
+	        box-shadow: 0 0 10px white;
 	}
 
 .digitalAgencies {
 	background: url(../preview/DigitalAgencies-preview.jpg);
-	background-size: cover;
+	-webkit-background-size: cover;
+	        background-size: cover;
+	-webkit-transition: background-position 4s,-webkit-box-shadow 0.1s;
+	transition: background-position 4s,-webkit-box-shadow 0.1s;
+	-o-transition: background-position 4s,box-shadow 0.1s;
 	transition: background-position 4s,box-shadow 0.1s;
+	transition: background-position 4s,box-shadow 0.1s,-webkit-box-shadow 0.1s;
 	}
 .businessTemplate {
 	background: url(../preview/BusinessTemplate-preview.jpg);
-	background-size: cover;
+	-webkit-background-size: cover;
+	        background-size: cover;
+	-webkit-transition: background-position 2s ,-webkit-box-shadow 0.1s;
+	transition: background-position 2s ,-webkit-box-shadow 0.1s;
+	-o-transition: background-position 2s ,box-shadow 0.1s;
 	transition: background-position 2s ,box-shadow 0.1s;
+	transition: background-position 2s ,box-shadow 0.1s ,-webkit-box-shadow 0.1s;
 	}
 .freelancerTemplate {
 	background: url(../preview/FreelancerTemplate-preview.jpg);
-	background-size: cover;
+	-webkit-background-size: cover;
+	        background-size: cover;
+	-webkit-transition: background-position 2s ,-webkit-box-shadow 0.1s;
+	transition: background-position 2s ,-webkit-box-shadow 0.1s;
+	-o-transition: background-position 2s ,box-shadow 0.1s;
 	transition: background-position 2s ,box-shadow 0.1s;
+	transition: background-position 2s ,box-shadow 0.1s ,-webkit-box-shadow 0.1s;
 	}
 
 @media (max-width: 538px) {
-	
+
 	.container {
-		justify-content: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		padding: 30px 0;
 	}
 
 	h1 {
-		margin: 35px 0;
+		margin-bottom: 30px;
 	}
+	
 }

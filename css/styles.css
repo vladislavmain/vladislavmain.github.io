@@ -153,6 +153,17 @@ a:hover {
 	transition: background-position 2s ,box-shadow 0.1s;
 	transition: background-position 2s ,box-shadow 0.1s ,-webkit-box-shadow 0.1s;
 	}
+.newProvidence {
+	background: url(../preview/NewProvidence.png);
+	-webkit-background-size: cover;
+			background-size: cover;
+	-webkit-transition: background-position 4s,-webkit-box-shadow 0.1s;
+	transition: background-position 4s,-webkit-box-shadow 0.1s;
+	-o-transition: background-position 4s,box-shadow 0.1s;
+	transition: background-position 4s,box-shadow 0.1s;
+	transition: background-position 4s,box-shadow 0.1s,-webkit-box-shadow 0.1s;
+	}
+
 
 @media (max-width: 538px) {
 
